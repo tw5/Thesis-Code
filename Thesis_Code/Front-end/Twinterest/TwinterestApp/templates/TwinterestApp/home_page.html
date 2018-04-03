@@ -1,0 +1,400 @@
+{% extends "TwinterestApp/skeleton.html" %}
+{% load staticfiles %}
+
+{% block title %}Mindshare Twitter{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block help %}
+
+            <div class="page-title">
+              <div class="title_left">
+
+                <h3>About Twinterest</h3><p>Twinterest is a web application that categorizes a brand’s Twitter followers by Interest and Influence.</p>
+                
+              </div>
+              <div class="title_right"><img src="{% static 'images/twinterest-logo.png' %}" height="125px" width="auto" style="display:inline-block;float:right;padding-right: 20px;padding-bottom: 10px;"></div>
+            </div>
+<br>
+
+<br>
+           
+
+
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title collapse-link">
+        <h2>What are the interest categories?</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          
+          <li><a><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" style="display:none;">
+      <p>
+      	User interest is categorized into the following: </p>
+      	<ul style="font-size: 12pt;">
+      	<li>Technology &amp; Science</li>
+		<li>Sports &amp; Fitness</li>
+		<li>Arts &amp; Culture</li>
+		<li>Food &amp; Drink</li>
+		<li>News &amp; Politics</li>
+		<li>Business &amp; Finance</li>
+		<li>Gaming</li>
+		<li>Fashion &amp; Beauty</li>
+		<li>Music</li>
+		<li>Unknown</li>
+      	</ul>
+      	<p>A user is only given an interest categorization if they have one clear interest from their Twitter biography. If it is unclear what a user’s interest is based off their Twitter biography, or multiple interests are expressed, then they are classified as “Unknown”.</p>
+
+      
+      <div class="row">
+      	
+      </div><br>
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title collapse-link">
+        <h2>How is a follower’s influence determined?</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          
+          <li><a><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" style="display:none;">
+      <p>A follower’s influence is determined in two separate ways: by assigning a user an Influence Score, and by assigning each user an Influence Category.</p>
+      <div class="row">
+      	
+      </div><br>
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title collapse-link">
+        <h2>What’s an Influence Score?</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          
+          <li><a><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" style="display:none;">
+      <p>The score is an integer from 0 to 100, where 0 corresponds to no influence and 100 is the highest possible degree of influence a user can exert on Twitter. Influence is assessed based on a user's reach, credibility and the size of their audience.</p>
+      <div class="row">
+      	
+      </div><br>
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title collapse-link">
+        <h2>What are the Influence categories?</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          
+          <li><a><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" style="display:none;">
+      <p>"Casual User" is your average Twitter user. They have small to medium followings, and use twitter mainly to connect with friends and colleagues they know in real life. They do not exert mass influence, but may help in word of mouth campaigns.<br><br>
+
+"YouTuber" users use Twitter to promote their YouTube channel and their personal brand. YouTuber users exert influence through their large Youtube followings.<br><br>
+
+"Writer or Journalist" users are made up of writers (either in traditional print/web journalism, personal blogs, or books) that publish as an authority in their field. These users utilize Twitter to connect with other experts in their field and promote their published pieces. These users exert influence as "experts" on a certain topic,
+and although their Twitter followings may not be massive, their thoughts and opinions are influential and their longform pieces may be widely read.<br><br>
+
+"Celebrity" users have massive Twitter followings. Their utility is self-explanatory.<br><br>
+
+"Business Expert" users are experts in small business practices and especially the social
+media and marketing space. Like the "Writer or Journalist" Influence Category, they don't have huge followings, but their expert opinions can be disproportionately influential. Unlike the 
+"Writer or Journalist” influence category, "Business Expert" users operate mainly in shortform on social media rather than publishing outside of Twitter. <br><br>
+
+"Brand or Corporation" users are brand accounts (i.e. @mindshare). <br><br>
+
+"Academic" users are professors, students, and educated experts in their chosen field.
+Like the "Writer or Journalist" and "Business Expert" influence categories, their opinions are influential, but largely within the academy or among younger, trendsetting college students. 
+In this category, hyper-specialized academic "experts" in a field are also included.</p>
+      <div class="row">
+      	
+      </div><br>
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title collapse-link">
+        <h2>How are these categories displayed?</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          
+          <li><a><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" style="display:none;">
+      <p>The interest categories are represented in the stacked bar chart that is immediately displayed upon choosing a twitter account of interest. For example, here is the single stacked bar chart that is displayed when choosing to look at Mindshare’s twitter account:</p><br>
+      <img src="{% static 'images/1st.jpg' %}">
+      <p>Notice that each interest category is displayed in a different color that is signified in the legend below along with its accompanying interest category. Notice that in the legend that “Unknown” is greyed out by default and does not appear in the single stacked bar chart. To view the “Unknown” interest category in the single stacked bar chart, click on “Unknown” in the legend, and it will appear in the chart. You can use this feature to add or remove any of the interest categories from the stacked bar chart display by clicking on the corresponding interest category in the legend below. </p>
+
+      <div class="row">
+      	
+      </div><br>
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title collapse-link">
+        <h2>What about the Influence Categories?</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          
+          <li><a><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" style="display:none;">
+      <p>There are two ways to display the influence categories. The first way to view them is by clicking the button that says “Influence” located to the left of the stacked bar chart, shown below:</p>
+      <img src="{% static 'images/2nd.jpg' %}">
+      <p>After clicking, notice that the single stacked bar chart turned into a stacked bar chart with each bar representing one of the different influence categories. This stacked bar chart allows you to see counts of the followers placed within each influence category, as well as the counts of interest categories within each influence category. For example, here is what Mindshare’s influence category stacked bar chart looks like:</p>
+      <img src="{% static 'images/3rd.jpg' %}">
+      <p>Within some influence categories, it may be difficult to see how the interest category is divided. To get a better view of these influence categories, you can click and drag to zoom in on the bar chart. To zoom back out, simply click the “Reset Zoom” button. <br><br>
+
+		Now, click the back button to return to the original single stacked bar chart. To view a breakdown of each influence category solely by one interest category, click on a section of the single stacked bar chart. Notice that the bar changed to a stacked bar chart with each bar representing a single influence category. Each bar represents the number of users with a given influence type that have the selected interest category. For example, here is the breakdown of users by influence type that follow Mindshare on Twitter and are Interested in Sports &amp; Fitness: </p>
+
+		<img src="{% static 'images/4th.jpg' %}">
+		<p>Below and to the left of the stacked bar chart is a distribution. This distribution is a display of the Influence Scores for the users that follow the selected brand. For example, here is what the distribution of Influence Scores for Mindshare’s followers looks like:</p>
+		<img src="{% static 'images/5th.jpg' %}">
+		<p>In order to get a better view of users within a certain range, you can click and drag to specify a range to zoom in on in the graph. Notice as you hover your mouse over the distribution, it displays how many users have that Influence Score. If you click on one of the scores, the display to the right of the distribution will show you each user with that Influence Score, along with a link to their Twitter page. </p>
+
+      <div class="row">
+      	
+      </div><br>
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title collapse-link">
+        <h2>What if I want to search for specific kinds of users? </h2>
+        <ul class="nav navbar-right panel_toolbox">
+          
+          <li><a><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" style="display:none;">
+      <p>Below the Influence Score distribution, there is a search feature. You may select the number of users to search for, which interest category they fall under, and which influence category they fall under. If it looks like a user has been classified incorrectly, click the ‘Report an error’ button to correctly classify the user so that next time they will be classified correctly. If a user has an inappropriate username or biography that you wouldn’t want to display in front of clients, click ‘Flag User’ so that they will not be displayed next time. </p>
+      <div class="row">
+      	
+      </div><br>
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title collapse-link">
+        <h2>Who made this awesome tool?</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          
+          <li><a><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content" style="display:none;">
+      <div class="row">
+      	<p>Six of the 2016 DataBytes Interns in New York did! You can contact each of us here:</p>
+      </div><br>
+      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view" style="width:100%;">
+                          <div class="col-sm-12">
+                            
+                              <h2 style="padding-bottom:10px;">Arnold Ballesteros</h2>
+                              
+                              <ul class="list-unstyled">
+
+                                <li style="padding-bottom:10px;"><i class="fa fa-envelope"></i> Email: aballesteros2@fordham.edu</li>
+                                <li><button type="button" class="btn btn-primary btn-xs" style="background-color:#6d358a; outline-color:#6d358a;"><a href="https://www.linkedin.com/in/ballesterosarnold" target="_blank" style="color:white;">
+                                <i class="fa fa-linkedin-square"> </i>  View LinkedIn
+                              </a></button></li>
+                                
+                              </ul>
+                            
+                          </div>
+                   
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view" style="width:100%;">
+                          <div class="col-sm-12">
+                            
+                              <h2 style="padding-bottom:10px;">Dana Kirsanov</h2>
+                              
+                              <ul class="list-unstyled">
+
+                                <li style="padding-bottom:10px;"><i class="fa fa-envelope"></i> Email: dk2425@nyu.edu</li>
+                                <li><button type="button" class="btn btn-primary btn-xs" style="background-color:#6d358a; outline-color:#6d358a;"><a href="https://www.linkedin.com/in/dana-kirsanov-67b172b9" target="_blank" style="color:white;">
+                                <i class="fa fa-linkedin-square"> </i>  View LinkedIn
+                              </a></button></li>
+                                
+                              </ul>
+                            
+                          </div>
+                   
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view" style="width:100%;">
+                          <div class="col-sm-12">
+                            
+                              <h2 style="padding-bottom:10px;">Grant Belsterling</h2>
+                              
+                              <ul class="list-unstyled">
+
+                                <li style="padding-bottom:10px;"><i class="fa fa-envelope"></i> Email: grant.belsterling@pomona.edu </li>
+                                <li><button type="button" class="btn btn-primary btn-xs" style="background-color:#6d358a; outline-color:#6d358a;"><a href="https://www.linkedin.com/in/grant-belsterling-681211b1" target="_blank" style="color:white;">
+                                <i class="fa fa-linkedin-square"> </i>  View LinkedIn
+                              </a></button></li>
+                                
+                              </ul>
+                            
+                          </div>
+                   
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view" style="width:100%;">
+                          <div class="col-sm-12">
+                            
+                              <h2 style="padding-bottom:10px;">Kyle Becker</h2>
+                              
+                              <ul class="list-unstyled">
+
+                                <li style="padding-bottom:10px;"><i class="fa fa-envelope"></i> Email: kbecker9@fordham.edu</li>
+                                <li><button type="button" class="btn btn-primary btn-xs" style="background-color:#6d358a; outline-color:#6d358a;"><a href="https://www.linkedin.com/in/kyle-becker-04ba0ab5" target="_blank" style="color:white;">
+                                <i class="fa fa-linkedin-square"> </i>  View LinkedIn
+                              </a></button></li>
+                                
+                              </ul>
+                            
+                          </div>
+                   
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view" style="width:100%;">
+                          <div class="col-sm-12">
+                            
+                              <h2 style="padding-bottom:10px;">Thomas Weng</h2>
+                              
+                              <ul class="list-unstyled">
+
+                                <li style="padding-bottom:10px;"><i class="fa fa-envelope"></i> Email: tw5@princeton.edu</li>
+                                <li><button type="button" class="btn btn-primary btn-xs" style="background-color:#6d358a; outline-color:#6d358a;"><a href="https://www.linkedin.com/in/thomas-weng-3251428b" target="_blank" style="color:white;">
+                                <i class="fa fa-linkedin-square"> </i>  View LinkedIn
+                              </a></button></li>
+                                
+                              </ul>
+                            
+                          </div>
+                   
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view" style="width:100%;">
+                          <div class="col-sm-12">
+                            
+                              <h2 style="padding-bottom:10px;">Mason Kirchner</h2>
+                              
+                              <ul class="list-unstyled">
+
+                                <li style="padding-bottom:10px;"><i class="fa fa-envelope"></i> Email: MasonKirchner@gmail.com</li>
+                                <li><button type="button" class="btn btn-primary btn-xs" style="background-color:#6d358a; outline-color:#6d358a;"><a href="https://www.linkedin.com/in/mason-kirchner-8728819b" target="_blank" style="color:white;">
+                                <i class="fa fa-linkedin-square"> </i>  View LinkedIn
+                              </a></button></li>
+                                
+                              </ul>
+                            
+                          </div>
+                   
+                        </div>
+                      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+                     
+
+                      
+
+        
+        <!-- /page content -->
+{% endblock %}
